@@ -9,7 +9,7 @@ macroKey := "F1"  ; Static keybind
 Gui, +AlwaysOnTop -Resize -MaximizeBox
 Gui, Font, s12, Segoe UI
 
-dropdownItems := "Fortune Potions|Haste Potions|Jewelry Potion|Zombie Potion|Rage Potion|Diver Potion|Potion of Bound|Heavenly Potion|Godly Potion (Lord of the Sky)|Godly Potion (Lord of the Sea)|Godly Potion (Lord of the Hell)|Warp Potion"
+dropdownItems := "Fortune Potions|Haste Potions|Jewelry Potion|Zombie Potion|Rage Potion|Diver Potion|Potion of Bound|Heavenly Potion|Godly Potion (Lord of the Sky)|Godly Potion (Lord of the Sea)|Godly Potion (Lord of the Hell)|Forbidden Potion|Warp Potion"
 speedOptions := "Very Slow|Slow|Normal|Fast|Ultra Fast"
 
 Gui, Add, Tab2, x10 y10 w380 h220 vMainTab, Macro|Credits
@@ -169,6 +169,20 @@ else if (selected = "Godly Potion (Lord of the Sea)") {
 }
 else if (selected = "Godly Potion (Lord of the Hell)") {
     MouseMove, 800, 629
+    Click
+    Sleep, %sleepDuration%
+    MouseMove, 576, 576
+    Click
+    Sleep, %sleepDuration%
+}
+else if (selected = "Forbidden Potion") {
+    MouseMove, 800, 629
+    Click
+    Sleep, %sleepDuration%
+    MouseMove, 800, 685
+    Click
+    Sleep, %sleepDuration%
+    MouseMove, 800, 740
     Click
     Sleep, %sleepDuration%
     MouseMove, 576, 576
